@@ -42,6 +42,20 @@ Scanner scanner=new Scanner(System.in);
             a[index]=0;
     }
 
+    public void ShiftLeft_delete(int []a,int index){
+        if(index<0 || index>a.length-1)
+            System.out.println("Index "+index+ " not found");
+        else
+            for(int i=index;i<a.length-1;i++)
+                a[i]=a[i+1];
+
+              a[a.length-1]=Integer.MIN_VALUE;
+
+
+
+
+    }
+
 
 
     public int LinearSearch(int []a, int value){

@@ -10,7 +10,9 @@ public class Main {
         Scanner scanner= new Scanner(System.in);
         Arrayss arr=new Arrayss();
        // int []numbers= new int[4];
-        int []numbers={1,4,3,4,5,2};
+        int []numbers={1,2,3,4,5,2};
+        arr.ShiftLeft_delete(numbers,3);
+        arr.traversal(numbers);
 
 //        arr.input(numbers);
 //        arr.traversal(numbers);
@@ -22,13 +24,13 @@ public class Main {
         // arr.delete(numbers,3);
 
         //int result=arr.LinearSearch(numbers,2);
-        Arrays.sort(numbers);
-        //arr.traversal(numbers);
-        int result=arr.BinarySearch(numbers,0,numbers.length-1,2);
-
-        //   arr.traversal(numbers);
-        System.out.println(result);
-
+//        Arrays.sort(numbers);
+//        //arr.traversal(numbers);
+//        int result=arr.BinarySearch(numbers,0,numbers.length-1,2);
+//
+//        //   arr.traversal(numbers);
+//        System.out.println(result);
+//
 
     }
 }
