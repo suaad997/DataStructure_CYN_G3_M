@@ -18,7 +18,7 @@ public class SinglyLinkedList<E> {
      Node<E> newNode = new Node(data,head);
      head=newNode;
      if (size==0)
-         head=tail;
+         tail=head;
 
 
      size++;
