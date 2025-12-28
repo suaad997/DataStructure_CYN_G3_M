@@ -25,7 +25,6 @@ public class SinglyLinkedList<E> {
      if(IsEmpty())return null;
      return head.getData();
  }
-
  public E removeFirst(){
      if(IsEmpty()) return null;
      E delete= head.getData();
@@ -37,7 +36,6 @@ public class SinglyLinkedList<E> {
      }
      return delete;
  }
-
  public void addLast(E data){
      Node<E> newNode= new Node(data,null);
      if(IsEmpty())
@@ -47,7 +45,6 @@ public class SinglyLinkedList<E> {
      tail=newNode;
      size++;
  }
-
  public E getLast(){
      if(IsEmpty())return null;
      return tail.getData();
@@ -78,7 +75,36 @@ public class SinglyLinkedList<E> {
      System.out.println("null \n");
 
  }
+public void addAtPosition(E data,int position){
+     if(position<1 || position>size+1){
+//         System.out.println("invalid position");
+//         return;
+         throw new IllegalArgumentException("invalid position");
+     }
 
+     if(position==1) {
+         addFirst(data);
+         return;
+     }
+     else {
+         Node<E> newNode=new Node(data,null);
+         int count=1;
+         Node<E> temp=head;
+         while (count<position-1){
+             temp=temp.getNext();
+             count++;
+         }
+         newNode.setNext(temp.getNext());
+         temp.setNext(newNode);
+
+         if (newNode.getNext()==null){
+             tail=newNode;
+         }
+         size++;
+
+     }
+
+}
 
 
 
