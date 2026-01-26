@@ -1,0 +1,18 @@
+package Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayQueue<Integer> aQueue=new ArrayQueue<Integer>();
+        aQueue.enqueue(10);
+        aQueue.enqueue(15);
+        aQueue.enqueue(20);
+        aQueue.enqueue(25);
+        System.out.println("the front is: "+aQueue.front());
+        while (!aQueue.isEmpty()){
+            System.out.println("element removed:"+aQueue.dequeue());
+        }
+
+
+
+    }
+}

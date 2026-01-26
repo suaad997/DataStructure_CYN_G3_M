@@ -12,7 +12,6 @@ public int size(){
     }
 public boolean IsEmpty(){
         return size()==0;
-
     }
 public void addFirst(E data){
     if (IsEmpty()){
